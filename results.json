@@ -1,0 +1,43 @@
+{
+  "project": "Bosch HAR using WISDM",
+  "dataset": {
+    "name": "WISDM",
+    "total_samples": 64311,
+    "training_samples": 172,
+    "test_samples": 44,
+    "activities": [
+      "Walking",
+      "Jogging",
+      "Sitting",
+      "Standing"
+    ]
+  },
+  "model": {
+    "architecture": "CNN-LSTM with Attention",
+    "parameters": 134148,
+    "input_shape": [
+      128,
+      3
+    ],
+    "output_classes": 4
+  },
+  "training": {
+    "epochs": 17,
+    "training_time_min": 0.18580961624781292,
+    "batch_size": 64
+  },
+  "performance": {
+    "test_accuracy": 0.75,
+    "precision": 0.5836397058823529,
+    "recall": 0.75,
+    "f1_score": 0.6501322751322752,
+    "avg_inference_ms": 42.0622189839681
+  },
+  "baseline_comparison": {
+    "dense": 0.9545454382896423,
+    "lstm": 0.9545454382896423,
+    "cnn": 1.0,
+    "ours": 0.75
+  },
+  "timestamp": "2025-11-06T23:20:29.089438"
+}
